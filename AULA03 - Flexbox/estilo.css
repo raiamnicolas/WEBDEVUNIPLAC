@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+#Flexbox1{
+    background-color: rgb(240, 167, 240);
+    padding: 16px;
+    height: 100%;
+    /* Propriedade do Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#Flexbox2{
+    /* FORMATAÇÃO BASICA */
+    background-color: rgb(135, 183, 255);
+    padding: 15px;
+    height: 100%;
+
+    /* Propriedade do Flexbox */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 20px;
+}    
+
+
+.bloco-1{
+    background-color: blueviolet;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.bloco-2{
+    background-color: red;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.bloco-3{
+    background-color: rgb(4, 255, 0);
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.bloco-4{
+    background-color: blueviolet;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.bloco-5{
+    background-color: red;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.bloco-6{
+    background-color: rgb(4, 255, 0);
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border-radius: 16px;
+}
