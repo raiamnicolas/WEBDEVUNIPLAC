@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio JavaScript</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Exercicio</h1>
+    <script>
+    let nome = prompt("Qual é o seu nome?");
+    if (nome) {
+    alert(`Olá, ${nome}! Seja bem-vindo(a)!`);
+} else {
+    alert("Que pena que você não quis dizer seu nome. Volte sempre!");
+}
+ 
+    let temperatura = parseFloat(prompt("Qual a temperatura em Celsius?"))
+    if (!isNaN(temperatura)) {
+        let fahrenheit = (temperatura * 9/5) + 32;
+        alert(`A temperatura em Fahrenheit é ${fahrenheit.toFixed(2)}°F.`);
+    } else {
+        alert("Você não digitou uma temperatura válida.");
+    }
+
+    //calculadora
+    let num1 = parseFloat(prompt("Digite o primeiro número:"));
+    let num2 = parseFloat(prompt("Digite o segundo número:"));
+    let operacao = prompt("Escolha a operação: +, -, *, /");
+    let resultado;
+    document.write("<h2>Resultado da Calculadora</h2>");
+    if (operacao === "+") {
+        resultado = num1 + num2;
+        document.write(`${num1} + ${num2} = ${resultado}`);
+    } else if (operacao === "-") {
+        resultado = num1 - num2;
+        document.write(`${num1} - ${num2} = ${resultado}`);
+    } else if (operacao === "*") {
+        resultado = num1 * num2;
+        document.write(`${num1} * ${num2} = ${resultado}`);
+    } else if (operacao === "/") {
+        if (num2 !== 0) {
+            resultado = num1 / num2;
+            document.write(`${num1} / ${num2} = ${resultado}`);
+        } else {
+            document.write("Divisão por zero não é permitida.");
+        }
+    } else {
+        document.write("Operação inválida.");
+    }
+    </script>
+</body>
+</html>
