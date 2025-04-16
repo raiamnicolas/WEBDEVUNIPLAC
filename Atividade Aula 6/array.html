@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+    <script>
+        // Variavel simples
+        let fruta1 = "banana";
+        let fruta2 = "maça";
+        let fruta3 = "laranja";
+        let fruta4 = "uva";
+
+        alert(fruta2);
+
+        // Array - Lista de frutas
+        let frutas = ["banana", "maça", "laranja", "uva"];
+
+       for (let i = 0; i < 4; i++){
+            document.write(frutas[i]);
+            document.write("<br>"); // quebra de linha
+            // exibe cada fruta do array
+        }
+
+
+
+
+    
+
+
+
+        // adicionando frutas no array
+        frutas.push("abacaxi");
+
+        //removendo frutas do array
+        frutas.pop(); // remove o último elemento do array
+
+        //remover fruta especifica
+        frutas.splice(1, 1); // remove a fruta na posição 1 (maça) || 1 é o índice da fruta a ser removida e 1 é a quantidade de elementos a serem removidos a partir do índice especificado.
+
+
+    </script>
+</body>
+</html>
