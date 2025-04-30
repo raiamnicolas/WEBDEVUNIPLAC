@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio JavaScript</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1 id="meio">Exercicio DOM</h1>
+
+    <button id="mudarCor">Mudar Cor de Fundo</button>
+
+    <div>
+        <input type="text" id="textoInput" placeholder="Digite algo">
+        <button id="exibirTexto">Exibir Texto</button>
+    </div>
+    
+    <div>
+        <button id="decrementar">-</button>
+        <span id="contador">0</span>
+        <button id="incrementar">+</button>
+    </div>
+
+    <div>
+        <input type="text" id="corInput" placeholder="Digite uma cor (ex: red, #ff0000)">
+    </div>
+
+    <div>
+        <h2>Formulário</h2>
+        <form id="formulario">
+            <input type="text" id="nome" placeholder="Nome" required><br>
+            <input type="email" id="email" placeholder="E-mail" required><br>
+            <textarea id="mensagem" placeholder="Mensagem" required></textarea><br>
+            <button type="button" id="enviarFormulario">Enviar</button>
+        </form>
+        <div id="dadosExibidos">Texto inicial de teste</div>
+    </div>
+
+    <script>
+         const botaoEnviar = document.getElementById('enviarFormulario');
+        botaoEnviar.addEventListener('click', () => {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const dadosExibidos = document.getElementById('dadosExibidos');
+            dadosExibidos.innerHTML = `
+                <p><strong>Nome:</strong> ${nome}</p>
+                <p><strong>E-mail:</strong> ${email}</p>
+                <p><strong>Mensagem:</strong> ${mensagem}</p>
+            `;
+        });
+
+         const corInput = document.getElementById('corInput');
+        corInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                const cor = corInput.value;
+                document.body.style.backgroundColor = cor;
+            }
+        });
+
+        const botao = document.getElementById('mudarCor');
+        botao.addEventListener('click', () => {
+            document.body.style.backgroundColor = gerarCorAleatoria();
+        });
+
+        function gerarCorAleatoria() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        const botaoExibir = document.getElementById('exibirTexto');
+        botaoExibir.addEventListener('click', () => {
+        const texto = document.getElementById('textoInput').value;
+        const dadosExibidos = document.getElementById('dadosExibidos');
+        dadosExibidos.textContent = texto;
+        });
+
+        let contador = 0;
+        const spanContador = document.getElementById('contador');
+        const botaoIncrementar = document.getElementById('incrementar');
+        const botaoDecrementar = document.getElementById('decrementar');
+
+        botaoIncrementar.addEventListener('click', () => {
+            contador++;
+            spanContador.textContent = contador;
+        });
+
+        botaoDecrementar.addEventListener('click', () => {
+            contador--;
+            spanContador.textContent = contador;
+        });
+
+    </script>
+</body>
+</html>
